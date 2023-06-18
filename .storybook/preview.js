@@ -1,4 +1,10 @@
 import '../src/index.css';
+import { createPinia } from 'pinia';
+import {setup} from '@storybook/vue3'
+
+setup((app) => {
+  app.use(createPinia());
+});
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
