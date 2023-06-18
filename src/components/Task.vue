@@ -17,13 +17,8 @@
 </template>
   
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-
-interface Task {
-    id: String,
-    title: String,
-    state: String
-}
+import { computed, ref } from 'vue';
+import { Task } from '../types/Task';
 
 const emit = defineEmits(['archive-task', 'pin-task'])
 
@@ -44,7 +39,6 @@ const isChecked = computed(() => {
 const stateClass = computed(() => {
     return task.value.state;
 })
-
 
 function archiveTask() {
     emit('archive-task', props.task.id);
