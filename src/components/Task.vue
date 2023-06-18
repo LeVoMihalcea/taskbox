@@ -46,8 +46,6 @@ function archiveTask() {
 function pinTask() {
     emit('pin-task', props.task.id);
 }
-
-console.log(props.task);
 </script>
 
 <style scoped>

@@ -16,7 +16,7 @@ const taskStore = useTaskStore();
 
 const tasks = computed(() => taskStore.getFilteredTasks);
 
-const archiveTask = (task) => store.archiveTask(task);
-const pinTask = (task) => store.pinTask(task);
+const archiveTask = (task) => taskStore.archiveTask(task);
+const pinTask = (task) => taskStore.pinTask(task);
 
 </script>
